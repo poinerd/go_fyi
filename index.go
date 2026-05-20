@@ -14,7 +14,6 @@ import "fmt"
 
 //  var counter int = 0
 
-
 func add (a,b int)(int){
 	return a+b
 }
@@ -23,8 +22,7 @@ func main(){
       counter := 0  // Go infers this to be an integer
 
 	//   Use := when you want to create a variable for the first time inside a function without typing out var. Use = when you just want to update a variable that already exists.
-
-	for i := 0; i<5; i++ {
++for i := 0; i<5; i++ {
 		if i == 3 {
 			fmt.Printf("Hello there\n")
 		} else{

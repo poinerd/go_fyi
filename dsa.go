@@ -1,12 +1,9 @@
 // Slices, Arrays and Maps
-
-
 package main
 
 import (
 	"fmt"
-	"runtime"
-)
+	"runtimem, ")
 
 func loopOverArray(arr []int){
 	for i := 0; i<len(arr) ; i++{
@@ -15,7 +12,6 @@ func loopOverArray(arr []int){
 }
 
 func main(){
-
 	cores := runtime.NumCPU()
 	fmt.Printf("Your computer has %d physical CPU cores.\n", cores)
 

@@ -9,17 +9,15 @@ type Cache struct {
 	mu   sync.RWMutex
 	data map[string]string
 }
-
-func NewCache() *Cache {
+func NewCache() *Cache { //To avoid goo= copying stuff
 	return &Cache{
 		data: make(map[string]string),
 	}
 }
 
-func (c *Cache) SetCache(key, value string) {
+func (c *Cache) SetCache(key, value string) { 
 	c.mu.Lock()
 	defer c.mu.Unlock()
-
 	c.data[key] = value
 }
 

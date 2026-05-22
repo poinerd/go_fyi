@@ -7,7 +7,7 @@ import(
 	"encoding/json"
 )
 
-type User struct{
+type User struct{   
 	ID string `json:"id"`
 	Name string `json:"name"`
 }
@@ -25,6 +25,12 @@ func getUsers(w http.ResponseWriter, r *http.Request){
 }
 
 func createUser(w http.ResponseWriter, r *http.Request){
+
+	if r.method != http.MethodPost{
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+
+	}
     var user User
 	
 	json.NewDecoder(r.Body).Decode(&user)

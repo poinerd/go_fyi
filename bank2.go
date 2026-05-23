@@ -14,7 +14,7 @@ type account struct{
 	balance int
 }
 
-var accounts []*account
+var accounts []*account // thi stores coordinats of the accounts created
 
 func getAllAccount () []*account{
 	return accounts

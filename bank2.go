@@ -40,7 +40,6 @@ func (a *account) deposit (amount int, wg *sync.WaitGroup) int{
 
 	initialBalance := a.balance
 	a.balance = initialBalance + amount
-
 	return a.balance
 
 }
@@ -66,9 +65,7 @@ func main(){
 	wg.Wait()
 
 	balance := newUser.getBalance()
-
 	fmt.Println(balance)
-
 }
 
 

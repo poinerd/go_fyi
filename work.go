@@ -13,16 +13,15 @@ type Counter struct {
 //I would use a wg instead of a channel
 
 func main(){
-
+	
 	aWorker := &Counter{
 		count : 0,
 	}
 
 	// var w sync.WaitGroup
 	done := make(chan bool)
-    
+ 
 	// w.Add(2)
-
 	// go work(aWorker, &w)
 	// go work(aWorker, &w)
 

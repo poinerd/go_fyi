@@ -32,7 +32,6 @@ func createAccount () *account{
 }
 
 func (a *account) deposit (amount int, wg *sync.WaitGroup) int{
-	
 	defer wg.Done()
 
 	a.mu.Lock()
@@ -64,7 +63,7 @@ func main(){
 
 	wg.Wait()
 
-	balance := newUser.getBalance()
+	balance := newUser.getBalance()-
 	fmt.Println(balance)
 }
 

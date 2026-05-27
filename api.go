@@ -26,10 +26,9 @@ func getUsers(w http.ResponseWriter, r *http.Request){
 
 func createUser(w http.ResponseWriter, r *http.Request){
 
-	if r.method != http.MethodPost{
+	if r.Method != http.MethodPost{
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
-
 	}
     var user User
 	
@@ -43,10 +42,13 @@ func home(w http.ResponseWriter, r *http.Request){
 	fmt.Fprintln(w, "Hello world")
 }
 
+
+
 func main(){
 	http.HandleFunc("/", home)
 	http.HandleFunc("/create", createUser)
 	http.HandleFunc("/users", getUsers)
-	fmt.Println("server is tunnign at port")
+
+    fmt.Println("server is tunnign at port")
 	http.ListenAndServe(":8080", nil)
 }
